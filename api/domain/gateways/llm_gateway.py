@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from api.domain.entities.llm_message import LLMMessage
 import numpy.typing as npt
 
+
 class LLMGateway(ABC):
 
     @abstractmethod

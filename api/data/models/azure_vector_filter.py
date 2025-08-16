@@ -1,10 +1,11 @@
 import numpy.typing as npt
 
-class AzureVectorFilter():
+
+class AzureVectorFilter:
     def __init__(self, project_name: str, vector: npt.NDArray):
         self.project_name = project_name
         self.vector = vector
-    
+
     def to_dict(self):
         return {
             "count": True,
@@ -16,7 +17,7 @@ class AzureVectorFilter():
                     "vector": self.vector.tolist(),
                     "k": 5,
                     "fields": "embeddings",
-                    "kind": "vector"
+                    "kind": "vector",
                 }
-            ]
+            ],
         }

@@ -7,5 +7,5 @@ if __name__ == "__main__":
         "api.main:app",
         host=settings.HOST,
         port=settings.PORT,
-        log_config="log_config.yaml"
+        log_config="log_config.yaml",
     )
