@@ -24,8 +24,8 @@ def get_settings(env: str = "dev"):
     if env.lower() == "dev":
         return LocalDevSettings()
     
-    raise ValueError('Invalid environment')
+    raise ValueError("Invalid environment")
 
-_env = os.environ.get('ENV', 'dev')
+_env = os.environ.get("ENV", "dev")
 
 settings = get_settings(_env)

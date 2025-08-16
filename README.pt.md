@@ -1,6 +1,6 @@
 # ClaudioAI
 
-Este é o chatbot **ClaudioAI**, inspirado no **ClaudIA** da [Cloud Humans](https://www.cloudhumans.com/). Ele é focado principalmente no conjunto de dados especificado, com algumas perguntas e respostas sobre a Tesla Motors. No entanto, pode ser facilmente adaptado para utilizar outros conjuntos de dados e LLMs.
+Este é o chatbot **ClaudioAI**, inspirado no **ClaudIA** da [Cloud Humans](https://www.cloudhumans.com/). Ele é focado principalmente no conjunto de dados específico, com algumas perguntas e respostas sobre a Tesla Motors. No entanto, pode ser facilmente adaptado para utilizar outros conjuntos de dados e LLMs.
 
 ## Arquitetura
 
@@ -26,9 +26,9 @@ O sistema está configurado para usar apenas resultados do banco de dados vetori
 
 ## Como executar
 
-1. Defina as chaves que estão faltando no arquivo `.env.dev`: `OPENAI_KEY` e `VECTOR_DB_KEY`.
-
-2. Execute `docker build -t claudioai .` e depois `docker run -p 8000:8000 claudioai`.
+1. Crie o arquivo `.env.dev` com base no arquivo `.env.example`;
+2. Defina as chaves que estão faltando no arquivo `.env.dev`: `OPENAI_KEY` e `VECTOR_DB_KEY`;
+3. Execute `docker build -t claudioai .` e depois `docker run -p 8000:8000 claudioai`.
 
 Exemplo de requisição HTTP:
 

@@ -29,8 +29,9 @@ The system is configured to only use results from the vector database with a sco
 
 ## How to execute
 
-1. Set the missing keys in `.env.dev`:  `OPENAI_KEY` and `VECTOR_DB_KEY` .
-2. Run `docker build -t claudioai .` followed by `docker run -p 8000:8000 claudioai`;
+1. Create the `.env.dev` file based on the `.env.example` file;
+2. Set the missing keys in `.env.dev`:  `OPENAI_KEY` and `VECTOR_DB_KEY`;
+3. Run `docker build -t claudioai .` followed by `docker run -p 8000:8000 claudioai`.
 
 Example of HTTP request:
 
