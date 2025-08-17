@@ -72,7 +72,7 @@ class TestConversationService:
             msg for msg in result.messages if msg.role == CompletionRole.AGENT
         ]
         assert len(agent_messages) == 2
-        
+
     def test_completion_success_for_no_enough_context(
         self, conversation_service, sample_completion_request, mock_vector_gateway
     ):
@@ -83,7 +83,7 @@ class TestConversationService:
                 type=VectorSearchResultType.N1,
             )
         ]
-        
+
         result = conversation_service.completion(sample_completion_request)
 
         assert isinstance(result, CompletionResponse)

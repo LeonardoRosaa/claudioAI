@@ -28,9 +28,9 @@ O sistema está configurado para usar apenas resultados do banco de dados vetori
 
 1. Crie o arquivo `.env.dev` com base no arquivo `.env.example`;
 2. Defina as chaves que estão faltando no arquivo `.env.dev`: `OPENAI_KEY` e `VECTOR_DB_KEY`;
-3. Execute `docker build -t claudioai .` e depois `docker run -p 8000:8000 claudioai`.
+3. Execute `docker build -t claudioai .` e depois `docker run -p 8000:8000 claudioai` ou `poetry shell` e depois `uvicorn api.main:app --reload --log-config=log_config.yaml`.
 
-Exemplo de requisição HTTP:
+A documentação da API também está disponível em `/docs`. Exemplo de requisição HTTP:
 
 ```bash
 curl --request POST \
@@ -47,3 +47,4 @@ curl --request POST \
 	]
 }'
 ```
+

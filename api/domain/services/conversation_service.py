@@ -76,7 +76,7 @@ class ConversationService:
                     CompletionMessage(
                         role=CompletionRole.AGENT,
                         content="Ooh sorry, I can't understand.",
-                    )
+                    ),
                 ],
                 sections_retrived,
                 True,
@@ -105,6 +105,7 @@ class ConversationService:
     """
      Remove items with a score less than 0.50
     """
+
     def _clarify(self, contexts: list[VectorSearchResult]) -> list[VectorSearchResult]:
         return [context for context in contexts if context.score >= 0.50]
 
