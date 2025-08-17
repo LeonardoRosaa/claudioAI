@@ -63,12 +63,16 @@ class ConversationService:
 
         sections_retrived = self.vector.filter(project_name, embedding)
         contexts = self._clarify(sections_retrived)
-        is_empty = len(contexts) == 0
+        has_context = len(contexts) == 0
 
-        if is_empty:
+        """
+        If there isn't enough context to generate a more accurate answer, respond with a default message to avoid wasting time and resources using the LLM API
+        """
+        if has_context:
             logger.info(f'No enough context to "{content.content}"')
             return (
                 [
+                    content,
                     CompletionMessage(
                         role=CompletionRole.AGENT,
                         content="Ooh sorry, I can't understand.",
