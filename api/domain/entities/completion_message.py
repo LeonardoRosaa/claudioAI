@@ -4,4 +4,4 @@ from pydantic import BaseModel, Field
 
 class CompletionMessage(BaseModel):
     role: CompletionRole = Field(examples=["USER"])
-    content: str = Field(max_length=200, examples=["What is Tesla?"])
+    content: str = Field(max_length=200, min_length=3, examples=["What is Tesla?"])
